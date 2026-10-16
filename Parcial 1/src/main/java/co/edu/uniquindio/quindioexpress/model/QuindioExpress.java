@@ -53,10 +53,7 @@ public class QuindioExpress {
         if (repartidores.containsKey(repartidor.getIdentificacion())) {
             return false;
         }
-        repartidores.put(
-                repartidor.getIdentificacion(),
-                repartidor
-        );
+        repartidores.put(repartidor.getIdentificacion(), repartidor);
         return true;
     }
 
@@ -67,7 +64,18 @@ public class QuindioExpress {
         return paquetesPorCodigo.get(codigo.trim());
     }
 
-    public List<String> getMunicipios() {
-        return Collections.unmodifiableList(new ArrayList<>(municipios));
+    public SortedSet<String> getMunicipios() {
+        return Collections.unmodifiableSortedSet(municipios);
+    }
+
+    public List<Paquete> getPaquetesByDestino(String destino) {
+        if (destino == null || destino.isBlank()) {
+            return Collections.emptyList();
+        }
+        List<Paquete> paquetesDestino = paquetesPorDestino.get(destino.trim());
+        if (paquetesDestino == null) {
+            return Collections.emptyList();
+        }
+        return Collections.unmodifiableList(paquetesDestino);
     }
 }

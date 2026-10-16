@@ -5,6 +5,7 @@ import co.edu.uniquindio.quindioexpress.model.Paquete;
 import co.edu.uniquindio.quindioexpress.model.Repartidor;
 
 import java.util.List;
+import java.util.SortedSet;
 
 public class ConsoleController {
     private ModelFactory modelFactory;
@@ -25,7 +26,11 @@ public class ConsoleController {
         return modelFactory.getByCodigo(codigo);
     }
 
-    public List<String> getMunicipios() {
+    public SortedSet<String> getMunicipios() {
         return modelFactory.getMunicipios();
+    }
+
+    public List<Paquete> getPaquetesByDestino(String destino) {
+        return modelFactory.getPaquetesByDestino(destino);
     }
 }
