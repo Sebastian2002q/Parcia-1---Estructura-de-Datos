@@ -3,6 +3,7 @@ package co.edu.uniquindio.quindioexpress.controller;
 import co.edu.uniquindio.quindioexpress.factory.ModelFactory;
 import co.edu.uniquindio.quindioexpress.model.Paquete;
 import co.edu.uniquindio.quindioexpress.model.Repartidor;
+import co.edu.uniquindio.quindioexpress.model.TipoDespacho;
 
 import java.util.List;
 import java.util.SortedSet;
@@ -32,5 +33,21 @@ public class ConsoleController {
 
     public List<Paquete> getPaquetesByDestino(String destino) {
         return modelFactory.getPaquetesByDestino(destino);
+    }
+
+    public boolean dispatchPaquete(TipoDespacho tipoDespacho) {
+        return modelFactory.dispatchPaquete(tipoDespacho);
+    }
+
+    public double getPesoTotalByMunicipio(String municipio) {
+        return modelFactory.getPesoTotalByMunicipio(municipio);
+    }
+
+    public int countPaquetesByPrioridad(int prioridadMinima) {
+        return modelFactory.countPaquetesByPrioridad(prioridadMinima);
+    }
+
+    public Paquete binarySearchByCodigo(String codigo) {
+        return modelFactory.binarySearchByCodigo(codigo);
     }
 }
