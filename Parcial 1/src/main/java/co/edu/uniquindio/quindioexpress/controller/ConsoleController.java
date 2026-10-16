@@ -5,6 +5,7 @@ import co.edu.uniquindio.quindioexpress.model.Paquete;
 import co.edu.uniquindio.quindioexpress.model.Repartidor;
 import co.edu.uniquindio.quindioexpress.model.TipoDespacho;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.SortedSet;
 
@@ -21,6 +22,10 @@ public class ConsoleController {
 
     public boolean add(Repartidor repartidor) {
         return modelFactory.add(repartidor);
+    }
+
+    public Repartidor getRepartidorByIdentificacion(String identificacion) {
+        return modelFactory.getRepartidorByIdentificacion(identificacion);
     }
 
     public Paquete getByCodigo(String codigo) {
@@ -49,5 +54,13 @@ public class ConsoleController {
 
     public Paquete binarySearchByCodigo(String codigo) {
         return modelFactory.binarySearchByCodigo(codigo);
+    }
+
+    public Paquete getPaqueteMayorPeso() {
+        return modelFactory.getPaqueteMayorPeso();
+    }
+
+    public List<Paquete> getPaquetesOrdenados(Comparator<Paquete> comparator) {
+        return modelFactory.getPaquetesOrdenados(comparator);
     }
 }

@@ -68,6 +68,13 @@ public class QuindioExpress {
         return true;
     }
 
+    public Repartidor getRepartidorByIdentificacion(String identificacion) {
+        if (identificacion == null || identificacion.isBlank()) {
+            return null;
+        }
+        return repartidores.get(identificacion.trim());
+    }
+
     public Paquete getByCodigo(String codigo) {
         if (codigo == null || codigo.isBlank()) {
             return null;
@@ -245,4 +252,29 @@ public class QuindioExpress {
         return binarySearch(lista, codigo, mitad + 1, fin);
     }
 
+    public Paquete getPaqueteMayorPeso() {
+        if (paquetes.isEmpty()) {
+            return null;
+        }
+        return findPaqueteMayorPeso(paquetes, 0, paquetes.size() - 1);
+    }
+
+    private Paquete findPaqueteMayorPeso(List<Paquete> lista, int inicio, int fin) {
+        if (inicio == fin) {
+            return lista.get(inicio);
+        }
+        int mitad = (inicio + fin) / 2;
+        Paquete mayorIzq = findPaqueteMayorPeso(lista, inicio, mitad);
+        Paquete mayorDer = findPaqueteMayorPeso(lista, mitad + 1, fin);
+        if (mayorIzq.getPeso() >= mayorDer.getPeso()) {
+            return mayorIzq;
+        }
+        return mayorDer;
+    }
+
+    public List<Paquete> getPaquetesOrdenados(Comparator<Paquete> comparator) {
+        List<Paquete> listaOrdenada = new ArrayList<>(paquetes);
+        listaOrdenada.sort(comparator);
+        return listaOrdenada;
+    }
 }
