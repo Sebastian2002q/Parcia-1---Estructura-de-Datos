@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3d07c79-4d3d-4eee-a884-fe58f75fab0c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/controller/ConsoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/factory/ModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/factory/ModelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/model/QuindioExpress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/model/QuindioExpress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/quindioexpress/view/ConsoleView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,59 +29,59 @@
     <decayedCancelled>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.5752277322028094E-173" />
-      <entry key="S5" value="7.567237063921884E-70" />
-      <entry key="S10" value="2.75086114951698E-35" />
-      <entry key="S30" value="3.0187204019810092E-12" />
-      <entry key="S60" value="1.7374465177405892E-6" />
-      <entry key="M2" value="0.001318128433762547" />
-      <entry key="M5" value="0.07253817950259613" />
-      <entry key="M10" value="0.4981406829229788" />
-      <entry key="M15" value="1.6542550647053067" />
-      <entry key="M30" value="7.610942709051581" />
-      <entry key="H1" value="17.611366891757783" />
-      <entry key="H2" value="27.113073481336095" />
-      <entry key="H4" value="33.72162424672441" />
-      <entry key="D1" value="40.48731671119915" />
-      <entry key="W1" value="41.780398533494555" />
+      <entry key="S2" value="2.327027903710643E-174" />
+      <entry key="S5" value="3.521442783858182E-70" />
+      <entry key="S10" value="1.8765507677273694E-35" />
+      <entry key="S30" value="2.6573786374009392E-12" />
+      <entry key="S60" value="1.6301468146843372E-6" />
+      <entry key="M2" value="0.0012767779265110098" />
+      <entry key="M5" value="0.07161923978393003" />
+      <entry key="M10" value="0.4949753133916307" />
+      <entry key="M15" value="1.6472397909453127" />
+      <entry key="M30" value="7.594787530046099" />
+      <entry key="H1" value="17.592665796797274" />
+      <entry key="H2" value="27.098674291283587" />
+      <entry key="H4" value="33.7126686304953" />
+      <entry key="D1" value="40.48552444383396" />
+      <entry key="W1" value="41.780134312952164" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000053057936542" />
-      <entry key="S2" value="1.0479940709281905" />
-      <entry key="S5" value="1.296807612565202" />
-      <entry key="S10" value="1.54480052548176" />
-      <entry key="S30" value="1.8167312492443441" />
-      <entry key="S60" value="1.9037338078616945" />
-      <entry key="M2" value="1.952048829968696" />
-      <entry key="M5" value="2.0523162934094863" />
-      <entry key="M10" value="2.278224920821848" />
-      <entry key="M15" value="2.5120864080732845" />
-      <entry key="M30" value="3.1899256610266824" />
-      <entry key="H1" value="4.080269395671194" />
-      <entry key="H2" value="4.852665738439731" />
-      <entry key="H4" value="5.369051617433178" />
-      <entry key="D1" value="5.885806096945327" />
-      <entry key="W1" value="5.983449654549481" />
+      <entry key="MS500" value="1.0004762503108215" />
+      <entry key="S2" value="1.154816436767711" />
+      <entry key="S5" value="1.603474395046021" />
+      <entry key="S10" value="2.0538142256243845" />
+      <entry key="S30" value="2.5992679575334225" />
+      <entry key="S60" value="2.78616467972108" />
+      <entry key="M2" value="2.890811846355067" />
+      <entry key="M5" value="3.0263168132707263" />
+      <entry key="M10" value="3.263748239841663" />
+      <entry key="M15" value="3.5014332904027436" />
+      <entry key="M30" value="4.183154644342142" />
+      <entry key="H1" value="5.075936653874269" />
+      <entry key="H2" value="5.850088588480055" />
+      <entry key="H4" value="6.367625732207479" />
+      <entry key="D1" value="6.885545547740236" />
+      <entry key="W1" value="6.983411815027394" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.1073424255446988E-8" />
-      <entry key="MS500" value="0.02915837646964369" />
-      <entry key="S2" value="0.44557718794714885" />
-      <entry key="S5" value="0.9557123078165061" />
-      <entry key="S10" value="1.341464909696308" />
-      <entry key="S30" value="1.7383210196793437" />
-      <entry key="S60" value="1.8629029525410212" />
-      <entry key="M2" value="1.932445706687777" />
-      <entry key="M5" value="2.1148900521703227" />
-      <entry key="M10" value="2.769186000716612" />
-      <entry key="M15" value="4.160260263837613" />
-      <entry key="M30" value="10.796402462717246" />
-      <entry key="H1" value="21.688640735451273" />
-      <entry key="H2" value="31.963939362271155" />
-      <entry key="H4" value="39.08967894331207" />
-      <entry key="D1" value="46.372940844528415" />
-      <entry key="W1" value="47.76382177130014" />
+      <entry key="MS100" value="2.4499930275984834E-17" />
+      <entry key="MS500" value="4.901343961262637E-4" />
+      <entry key="S2" value="0.21354997658760622" />
+      <entry key="S5" value="0.9100982215157097" />
+      <entry key="S10" value="1.5972735572890757" />
+      <entry key="S30" value="2.4105431477743138" />
+      <entry key="S60" value="2.686098294930039" />
+      <entry key="M2" value="2.8404530644283237" />
+      <entry key="M5" value="3.0754295059056513" />
+      <entry key="M10" value="3.745235203414443" />
+      <entry key="M15" value="5.138376916344227" />
+      <entry key="M30" value="11.771363121246543" />
+      <entry key="H1" value="22.664548203194897" />
+      <entry key="H2" value="32.94643289890087" />
+      <entry key="H4" value="40.07903213173688" />
+      <entry key="D1" value="47.37084376863489" />
+      <entry key="W1" value="48.76351338737155" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -102,37 +96,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Parcial1 [compile].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebit/Desktop/Parcia-1---Estructura-de-Datos/Parcial 1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/sebastian-quintero-florez/Escritorio/Parcial1/Parcial 1/src/main/java/co/edu/uniquindio/QuindioExpress/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Coverage",
+    "Application.QuindioExpress.executor": "Run",
+    "Maven.Parcial1 [compile].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sebit/Desktop/Parcia-1---Estructura-de-Datos/Parcial 1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/sebastian-quintero-florez/Escritorio/Parcial1/Parcial 1/src/main/java/co/edu/uniquindio/QuindioExpress/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="QuindioExpress" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.quindioexpress.Main" />
+      <module name="Parcial1" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\sebit\.m2\repository\org\openjfx\javafx-controls\21.0.6\javafx-controls-21.0.6-win.jar;C:\Users\sebit\.m2\repository\org\openjfx\javafx-graphics\21.0.6\javafx-graphics-21.0.6-win.jar;C:\Users\sebit\.m2\repository\org\openjfx\javafx-base\21.0.6\javafx-base-21.0.6-win.jar;C:\Users\sebit\.m2\repository\org\openjfx\javafx-fxml\21.0.6\javafx-fxml-21.0.6-win.jar&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -153,5 +158,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Parcial_1$Main.ic" NAME="Main Coverage Results" MODIFIED="1792203957859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>co.edu.uniquindio.quindioexpress.*</FILTER>
+    </SUITE>
   </component>
 </project>
