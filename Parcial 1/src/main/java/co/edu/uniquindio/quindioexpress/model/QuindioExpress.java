@@ -3,7 +3,6 @@ package co.edu.uniquindio.quindioexpress.model;
 import co.edu.uniquindio.quindioexpress.comparator.PaqueteDespachoComparator;
 import co.edu.uniquindio.quindioexpress.structures.ILista;
 import co.edu.uniquindio.quindioexpress.structures.ListaSimpleEnlazada;
-import com.sun.source.tree.Tree;
 
 import java.util.*;
 
@@ -72,14 +71,14 @@ public class QuindioExpress {
         if (identificacion == null || identificacion.isBlank()) {
             return null;
         }
-        return repartidores.get(identificacion.trim());
+        return repartidores.get(identificacion.trim().toUpperCase());
     }
 
     public Paquete getByCodigo(String codigo) {
         if (codigo == null || codigo.isBlank()) {
             return null;
         }
-        return paquetesPorCodigo.get(codigo.trim());
+        return paquetesPorCodigo.get(codigo.trim().toUpperCase());
     }
 
     public SortedSet<String> getMunicipios() {
@@ -276,5 +275,25 @@ public class QuindioExpress {
         List<Paquete> listaOrdenada = new ArrayList<>(paquetes);
         listaOrdenada.sort(comparator);
         return listaOrdenada;
+    }
+
+    public List<Paquete> getPaquetes() {
+        return Collections.unmodifiableList(paquetes);
+    }
+
+    public List<Repartidor> getRepartidores() {
+        return new ArrayList<>(repartidores.values());
+    }
+
+    public Map<String, String> getAsignaciones() {
+        return Collections.unmodifiableMap(new HashMap<>(asignaciones));
+    }
+
+    public List<Paquete> getHistorialEntregas() {
+        List<Paquete> entregados = new ArrayList<>();
+        for (Paquete paquete : historialEntregas) {
+            entregados.add(paquete);
+        }
+        return entregados;
     }
 }

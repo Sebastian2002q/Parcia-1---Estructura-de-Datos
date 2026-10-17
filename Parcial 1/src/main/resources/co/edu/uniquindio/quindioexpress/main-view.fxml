@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.quindioexpress.view.MainViewController">
+
+    <top>
+        <VBox spacing="5"
+              style="-fx-background-color: #183153; -fx-padding: 20;">
+
+            <Label text="QuindíoExpress"
+                   style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <Label text="Sistema de gestión de operaciones"
+                   style="-fx-text-fill: #cbd5e1; -fx-font-size: 14px;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+
+            <!-- PAQUETES -->
+
+            <Tab text="Paquetes" closable="false">
+                <VBox spacing="12" style="-fx-padding: 15;">
+
+                    <Label text="Paquetes pendientes"
+                           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+                    <Label text="Listado de paquetes pendientes, conservando su orden de llegada."
+                           style="-fx-text-fill: #64748b; -fx-font-size: 12px;"/>
+
+                    <Label text="Registrar nuevo paquete"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtCodigo"
+                                   promptText="Código" prefWidth="120"/>
+
+                        <TextField fx:id="txtDestino"
+                                   promptText="Destino" prefWidth="170"/>
+
+                        <TextField fx:id="txtPeso"
+                                   promptText="Peso (kg)" prefWidth="110"/>
+
+                        <TextField fx:id="txtPrioridad"
+                                   promptText="Prioridad (1-5)" prefWidth="120"/>
+
+                        <TextField fx:id="txtTiempo"
+                                   promptText="Tiempo (min)" prefWidth="130"/>
+
+                        <Button text="Registrar" onAction="#add"
+                                style="-fx-background-color: #183153; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                    </HBox>
+
+                    <Label text="Consultar paquetes"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtBuscarCodigo"
+                                   promptText="Código del paquete" prefWidth="200"/>
+
+                        <Button text="Buscar" onAction="#getByCodigo"/>
+                        <Button text="Mostrar todos" onAction="#getPaquetes"/>
+                    </HBox>
+
+                    <Label text="Filtrar por municipio"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="cmbMunicipios"
+                                  promptText="Seleccionar municipio" prefWidth="220"/>
+
+                        <Button text="Filtrar" onAction="#getPaquetesByDestino"/>
+                    </HBox>
+
+                    <Label text="Ordenar paquetes"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="cmbOrdenamiento"
+                                  promptText="Seleccionar criterio" prefWidth="280"/>
+
+                        <Button text="Ordenar" onAction="#getPaquetesOrdenados"/>
+                    </HBox>
+
+                    <TableView fx:id="tablaPaquetes" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colCodigo"
+                                         text="Código" prefWidth="130" sortable="false"/>
+
+                            <TableColumn fx:id="colDestino"
+                                         text="Destino" prefWidth="220" sortable="false"/>
+
+                            <TableColumn fx:id="colPeso"
+                                         text="Peso (kg)" prefWidth="140" sortable="false"/>
+
+                            <TableColumn fx:id="colPrioridad"
+                                         text="Prioridad" prefWidth="140" sortable="false"/>
+
+                            <TableColumn fx:id="colTiempo"
+                                         text="Tiempo (min)" prefWidth="160" sortable="false"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- REPARTIDORES -->
+
+            <Tab text="Repartidores" closable="false">
+                <VBox spacing="12" style="-fx-padding: 15;">
+
+                    <Label text="Gestión de repartidores"
+                           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+                    <Label text="Registrar nuevo repartidor"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtIdentificacion"
+                                   promptText="Identificación" prefWidth="150"/>
+
+                        <TextField fx:id="txtNombreCompleto"
+                                   promptText="Nombre completo" prefWidth="230"/>
+
+                        <TextField fx:id="txtZona"
+                                   promptText="Zona" prefWidth="180"/>
+
+                        <CheckBox fx:id="chkDisponible"
+                                  text="Disponible" selected="true"/>
+
+                        <Button text="Registrar" onAction="#addRepartidor"
+                                style="-fx-background-color: #183153; -fx-text-fill: white;"/>
+                    </HBox>
+
+                    <Label text="Consultar repartidores"
+                           style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <TextField fx:id="txtBuscarIdentificacion"
+                                   promptText="Identificación del repartidor"
+                                   prefWidth="240"/>
+
+                        <Button text="Buscar"
+                                onAction="#getRepartidorByIdentificacion"/>
+
+                        <Button text="Mostrar todos"
+                                onAction="#getRepartidores"/>
+                    </HBox>
+
+                    <TableView fx:id="tablaRepartidores" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colIdentificacion"
+                                         text="Identificación" prefWidth="160"
+                                         sortable="false"/>
+
+                            <TableColumn fx:id="colNombreCompleto"
+                                         text="Nombre completo" prefWidth="280"
+                                         sortable="false"/>
+
+                            <TableColumn fx:id="colZona"
+                                         text="Zona" prefWidth="200"
+                                         sortable="false"/>
+
+                            <TableColumn fx:id="colDisponible"
+                                         text="Disponible" prefWidth="150"
+                                         sortable="false"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+
+            <!-- DESPACHOS -->
+
+            <Tab text="Despachos" closable="false">
+                <VBox spacing="10" style="-fx-padding: 15;">
+
+                    <Label text="Gestión de despachos"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                    <Label text="Asignar paquetes a repartidores disponibles según su zona."
+                           style="-fx-text-fill: #64748b;"/>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="cmbTipoDespacho"
+                                  promptText="Seleccionar tipo de despacho"
+                                  prefWidth="250"/>
+
+                        <Button text="Despachar"
+                                onAction="#dispatchPaquete"
+                                style="-fx-background-color: #183153; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                    </HBox>
+
+                    <Separator/>
+
+                    <!-- ASIGNACIONES ACTIVAS -->
+
+                    <Label text="Asignaciones activas"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                    <TableView fx:id="tablaAsignaciones"
+                               prefHeight="150" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colAsignacionCodigo"
+                                         text="Código del paquete"
+                                         prefWidth="170" sortable="false"/>
+
+                            <TableColumn fx:id="colAsignacionDestino"
+                                         text="Destino"
+                                         prefWidth="190" sortable="false"/>
+
+                            <TableColumn fx:id="colAsignacionRepartidor"
+                                         text="Repartidor"
+                                         prefWidth="240" sortable="false"/>
+                        </columns>
+                    </TableView>
+
+                    <Label text="Selecciona una asignación para completar automáticamente el código de entrega."
+                           style="-fx-text-fill: #64748b;"/>
+
+                    <!-- CONFIRMAR ENTREGA -->
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Confirmar entrega"
+                               style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+
+                        <TextField fx:id="txtCodigoEntrega"
+                                   promptText="Código del paquete"
+                                   prefWidth="220"/>
+
+                        <Button text="Confirmar entrega"
+                                onAction="#confirmEntrega"
+                                style="-fx-background-color: #167347; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                    </HBox>
+
+                    <Separator/>
+
+                    <!-- HISTORIAL DE ENTREGAS -->
+
+                    <Label text="Historial de entregas"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                    <Label text="Paquetes entregados en el orden en que se confirmó su entrega."
+                           style="-fx-text-fill: #64748b;"/>
+
+                    <TableView fx:id="tablaHistorialEntregas"
+                               prefHeight="180" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colHistorialCodigo"
+                                         text="Código"
+                                         prefWidth="130" sortable="false"/>
+
+                            <TableColumn fx:id="colHistorialDestino"
+                                         text="Destino"
+                                         prefWidth="200" sortable="false"/>
+
+                            <TableColumn fx:id="colHistorialPeso"
+                                         text="Peso (kg)"
+                                         prefWidth="120" sortable="false"/>
+
+                            <TableColumn fx:id="colHistorialPrioridad"
+                                         text="Prioridad"
+                                         prefWidth="120" sortable="false"/>
+
+                            <TableColumn fx:id="colHistorialTiempo"
+                                         text="Tiempo (min)"
+                                         prefWidth="150" sortable="false"/>
+                        </columns>
+                    </TableView>
+
+                </VBox>
+            </Tab>
+
+            <!-- ALGORITMOS -->
+
+
+            <!-- ALGORITMOS -->
+
+            <Tab text="Algoritmos" closable="false">
+
+                <ScrollPane fitToWidth="true"
+                            hbarPolicy="NEVER">
+
+                    <VBox spacing="18"
+                          style="-fx-padding: 20;">
+
+                        <Label text="Consultas y algoritmos"
+                               style="-fx-font-size: 20px;
+                          -fx-font-weight: bold;"/>
+
+                        <Label text="Ejecutar los algoritmos sobre los paquetes pendientes."
+                               style="-fx-text-fill: #64748b;"/>
+
+                        <!-- PESO TOTAL POR MUNICIPIO -->
+
+                        <VBox spacing="10"
+                              style="-fx-background-color: #f1f5f9;
+                         -fx-padding: 15;
+                         -fx-background-radius: 8;">
+
+                            <Label text="1. Peso total por municipio"
+                                   style="-fx-font-size: 16px;
+                              -fx-font-weight: bold;"/>
+
+                            <Label text="Algoritmo recursivo que suma el peso de los paquetes de un municipio."/>
+
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+
+                                <ComboBox fx:id="cmbMunicipioAlgoritmo"
+                                          promptText="Seleccionar municipio"
+                                          prefWidth="230"/>
+
+                                <Button text="Calcular peso"
+                                        onAction="#getPesoTotalByMunicipio"/>
+
+                            </HBox>
+
+                            <Label fx:id="lblPesoTotal"
+                                   text="Selecciona un municipio para calcular su peso total."
+                                   wrapText="true"/>
+
+                        </VBox>
+
+                        <!-- CONTEO POR PRIORIDAD -->
+
+                        <VBox spacing="10"
+                              style="-fx-background-color: #f1f5f9;
+                         -fx-padding: 15;
+                         -fx-background-radius: 8;">
+
+                            <Label text="2. Conteo de paquetes por prioridad"
+                                   style="-fx-font-size: 16px;
+                              -fx-font-weight: bold;"/>
+
+                            <Label text="Algoritmo recursivo que cuenta los paquetes con prioridad mayor o igual a la indicada."/>
+
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+
+                                <TextField fx:id="txtPrioridadMinima"
+                                           promptText="Prioridad mínima (1-5)"
+                                           prefWidth="220"/>
+
+                                <Button text="Contar paquetes"
+                                        onAction="#countPaquetesByPrioridad"/>
+
+                            </HBox>
+
+                            <Label fx:id="lblConteoPrioridad"
+                                   text="Ingresa una prioridad mínima."
+                                   wrapText="true"/>
+
+                        </VBox>
+
+                        <!-- BÚSQUEDA BINARIA -->
+
+                        <VBox spacing="10"
+                              style="-fx-background-color: #f1f5f9;
+                         -fx-padding: 15;
+                         -fx-background-radius: 8;">
+
+                            <Label text="3. Búsqueda binaria por código"
+                                   style="-fx-font-size: 16px;
+                              -fx-font-weight: bold;"/>
+
+                            <Label text="Busca un paquete por su código en una lista ordenada."/>
+
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+
+                                <TextField fx:id="txtCodigoBinario"
+                                           promptText="Código del paquete"
+                                           prefWidth="220"/>
+
+                                <Button text="Buscar"
+                                        onAction="#binarySearchByCodigo"/>
+
+                            </HBox>
+
+                            <Label fx:id="lblBusquedaBinaria"
+                                   text="Ingresa el código de un paquete."
+                                   wrapText="true"/>
+
+                        </VBox>
+
+                        <!-- PAQUETE MÁS PESADO -->
+
+                        <VBox spacing="10"
+                              style="-fx-background-color: #f1f5f9;
+                         -fx-padding: 15;
+                         -fx-background-radius: 8;">
+
+                            <Label text="4. Paquete de mayor peso"
+                                   style="-fx-font-size: 16px;
+                              -fx-font-weight: bold;"/>
+
+                            <Label text="Algoritmo de divide y vencerás que encuentra el paquete más pesado."/>
+
+                            <Button text="Buscar paquete más pesado"
+                                    onAction="#getPaqueteMayorPeso"/>
+
+                            <Label fx:id="lblPaqueteMayorPeso"
+                                   text="Presiona el botón para encontrar el paquete más pesado."
+                                   wrapText="true"/>
+
+                        </VBox>
+
+                    </VBox>
+
+                </ScrollPane>
+
+            </Tab>
+
+
+        </TabPane>
+    </center>
+
+</BorderPane>

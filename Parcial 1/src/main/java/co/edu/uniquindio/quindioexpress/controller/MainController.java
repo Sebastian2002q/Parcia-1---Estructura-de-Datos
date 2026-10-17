@@ -7,12 +7,13 @@ import co.edu.uniquindio.quindioexpress.model.TipoDespacho;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.SortedSet;
 
-public class ConsoleController {
+public class MainController {
     private ModelFactory modelFactory;
 
-    public ConsoleController() {
+    public MainController() {
         modelFactory = ModelFactory.getInstance();
     }
 
@@ -44,6 +45,10 @@ public class ConsoleController {
         return modelFactory.dispatchPaquete(tipoDespacho);
     }
 
+    public boolean confirmEntrega(String codigoPaquete) {
+        return modelFactory.confirmEntrega(codigoPaquete);
+    }
+
     public double getPesoTotalByMunicipio(String municipio) {
         return modelFactory.getPesoTotalByMunicipio(municipio);
     }
@@ -62,5 +67,21 @@ public class ConsoleController {
 
     public List<Paquete> getPaquetesOrdenados(Comparator<Paquete> comparator) {
         return modelFactory.getPaquetesOrdenados(comparator);
+    }
+
+    public List<Paquete> getPaquetes() {
+        return modelFactory.getPaquetes();
+    }
+
+    public List<Repartidor> getRepartidores() {
+        return modelFactory.getRepartidores();
+    }
+
+    public Map<String, String> getAsignaciones() {
+        return modelFactory.getAsignaciones();
+    }
+
+    public List<Paquete> getHistorialEntregas() {
+        return modelFactory.getHistorialEntregas();
     }
 }
